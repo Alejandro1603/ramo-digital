@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌻 Para Ti</title>
+  <link rel="stylesheet" href="style/bouquet.css" />
+</head>
+<body>
+  <section class="bouquet-container">
+    <h1 class="bouquet-title">Un detalle para ti 🌻</h1>
+    <p class="bouquet-msg">Los girasoles me recuerdan a ti...</p>
+    <p class="bouquet-msg">Porque cuando estás cerca, todo es más bonito.</p>
+
+    <div class="bouquet-img"></div>
+    <p class="bouquet-msg">(Presiona el girasol)</p>
+
+    <a class="btn-next" href="mensaje.html">Siguiente 💌</a>
+  </section> 
+<!-- Galería Carrusel Oculta -->
+<div id="galeria" class="galeria-oculta">
+  <div class="galeria-contenido">
+    <span class="cerrar" onclick="cerrarGaleria()">×</span>
+    <div class="carrusel">
+      <div class="slide">
+        <img src="img/1.png" alt="Imagen 1">
+        <p>Te doy gracias por haber estado el dia de mi cumpleaños, 
+          gracias por compartire tu tiempo conmigo y hacerme reir con 
+          cada cosa q puedas hacer.</p>
+      </div>
+      <div class="slide">
+        <img src="img/2.png" alt="Imagen 2">
+        <p>Quiero decirte que cada momento que he compartido contigo lo atesoro
+          mucho, porque me hace feliz estar contigo, aunque a veces
+          no me aguantes.
+        </p>
+      </div>
+      <div class="slide">
+        <img src="img/3.png" alt="Imagen 3">
+        <p>]Recuerda que aunque tengamos discusiones o problemas,
+          no ovlides q cuentas conmigo para lo que quieras por que una vez prometi q estaria 
+          para ti cuando necesitaras de mi
+        </p>
+      </div>
+      <div class="slide">
+        <img src="img/4.png" alt="Imagen 3">
+        <p>Le doy gracias a la vida por haberme dejado cruzar en tu camino, el pasado q tu
+          y yo tenemos es algo impactante en un punto,
+          pero siempre agradezco tu precencia en mi vida
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mostrar galería al tocar el ramo
+  document.querySelector(".bouquet-img").addEventListener("click", () => {
+    document.getElementById("galeria").style.display = "flex";
+  });
+
+  function cerrarGaleria() {
+    document.getElementById("galeria").style.display = "none";
+  }
+</script>
+
+
+</body>
+</html>
+ 

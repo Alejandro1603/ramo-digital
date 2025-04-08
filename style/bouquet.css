@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  --morado: #d6b3f8;
+  --azul: #b3e5fc;
+  --dorado: #ffd700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: radial-gradient(circle at top, var(--morado), var(--azul));
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bouquet-container {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bouquet-title {
+  font-size: 1.8em;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 10px;
+}
+
+.bouquet-msg {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+.bouquet-img {
+  width: 220px;
+  height: 220px;
+  background-image: url('../img/ramo.png'); /* Aquí va la imagen generada */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: float 3s ease-in-out infinite;
+  margin-bottom: 30px;
+}
+
+.btn-next {
+  padding: 10px 20px;
+  background-color: rgb(111, 15, 167);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-next:hover {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.galeria-oculta {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.galeria-contenido {
+  background-color: #fffaf0;
+  padding: 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  max-height: 110%;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  animation: fadeIn 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #444;
+}
+
+.carrusel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+  flex: 0 0 80%;
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.slide img {
+  width: 70%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide p {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
